@@ -1,0 +1,215 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Container for max-width */
+body > section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Giới thiệu Section */
+#gioi-thieu {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: slideInDown 0.6s ease-out;
+}
+
+#gioi-thieu h1 {
+    font-size: 2.5em;
+    color: #667eea;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#gioi-thieu p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#gioi-thieu img {
+    border-radius: 10px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    height: auto;
+}
+
+#gioi-thieu img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Công thức Section */
+#cong-thuc {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 0.6s ease-out;
+}
+
+#cong-thuc h2 {
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+#cong-thuc h3 {
+    font-size: 1.5em;
+    color: #764ba2;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #f0e6ff;
+    transition: background-color 0.3s ease;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* List Styles */
+ol, ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+ol li, ul li {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 1.05em;
+}
+
+ol li {
+    list-style-position: outside;
+}
+
+ol li::marker {
+    color: #667eea;
+    font-weight: 600;
+}
+
+ul li::marker {
+    color: #764ba2;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #gioi-thieu h1 {
+        font-size: 1.8em;
+    }
+
+    #cong-thuc h2 {
+        font-size: 1.5em;
+    }
+
+    #gioi-thieu img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    #gioi-thieu, #cong-thuc {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.95em;
+    }
+
+    table th, table td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #gioi-thieu h1 {
+        font-size: 1.5em;
+    }
+
+    #cong-thuc h2 {
+        font-size: 1.2em;
+    }
+
+    body > section {
+        padding: 10px;
+    }
+
+    #gioi-thieu, #cong-thuc {
+        padding: 15px;
+    }
+}
